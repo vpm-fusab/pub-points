@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>FUSAB · PUB points</title><link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.95.3/dist/umd/supabase.js"></script>
+  <script type="module" src="upload.js"></script>
+</head>
+<body class="embed">
+  <main class="upload-card">
+    <p class="eyebrow">FUSAB / PUBLICITY POINTS</p>
+    <h1>Drop your PUB proof.</h1>
+    <p class="intro">Upload your photo. We’ll take it from here.</p>
+    <form id="upload-form">
+      <label id="drop-zone" class="drop-zone" for="photos">
+        <span class="upload-icon" aria-hidden="true">↑</span>
+        <strong>Choose photos or drop them here</strong>
+        <span>JPG, PNG or WEBP · up to 10 MB each</span>
+        <input id="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+      </label>
+      <div id="previews" class="previews" aria-label="Selected photos"></div>
+      <button id="submit" type="submit" disabled>Submit photos</button>
+      <p class="small">Your submission date and time are recorded automatically. Photos are visible only to the review team.</p>
+      <p id="status" role="status" aria-live="polite"></p>
+      <ul id="receipts" class="receipts"></ul>
+    </form>
+    <noscript>Please enable JavaScript to upload your photos.</noscript>
+  </main>
+</body>
+</html>
