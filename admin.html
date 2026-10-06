@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
+  <title>PUB points · Review</title><link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.95.3/dist/umd/supabase.js"></script>
+  <script type="module" src="admin.js"></script>
+</head>
+<body>
+  <main class="admin-shell">
+    <p class="eyebrow">FUSAB / REVIEW DESK</p><h1>PUB point submissions.</h1>
+    <form id="login" class="login-card">
+      <p>Sign in to review photos.</p>
+      <label for="email">Email</label><input id="email" type="email" autocomplete="username" required>
+      <label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required>
+      <button type="submit">Sign in</button>
+    </form>
+    <section id="dashboard" hidden>
+      <div class="toolbar">
+        <label for="filter">Show <select id="filter"><option value="submitted">Needs review</option><option value="recorded">Recorded in Pointagram</option><option value="deleted">Photos deleted</option></select></label>
+        <button id="refresh" class="secondary">Refresh</button><button id="logout" class="secondary">Sign out</button>
+      </div>
+      <p class="small">Add points in Pointagram, mark the submission recorded, then delete the photo when you’re finished. All times are Eastern.</p>
+      <p id="count" class="small"></p><div id="queue" class="queue"></div>
+      <button id="more" class="secondary" hidden>Load more</button>
+    </section>
+    <p id="status" role="status" aria-live="polite"></p>
+  </main>
+</body>
+</html>
